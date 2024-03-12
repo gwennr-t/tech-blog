@@ -12,7 +12,7 @@ This application is a CMS-style blog site where developers can publish their blo
 3. 
 
 # Credits
- Resources from class, Stack Overflow, and W3Schools were utilized to support creation of this application. Insomina was utilized to test routes.
+ Resources from class repo, Stack Overflow, and W3Schools were utilized to support creation of this application. Insomina was utilized to test routes.
 
 The following resources were specifically referenced and used:
 - [express-handlebars](https://www.npmjs.com/package/express-handlebars)
@@ -22,5 +22,3 @@ The following resources were specifically referenced and used:
 - [bcrypt](https://www.npmjs.com/package/bcrypt)
 - [express-session](https://www.npmjs.com/package/express-session)
 - [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
-<!-- - []()
-- []() -->
