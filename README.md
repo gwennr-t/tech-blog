@@ -6,11 +6,6 @@ This application is a CMS-style blog site where developers can publish their blo
 # Images/ Demo Video
 [Demo Video]()
 
-# Installation
-1. 
-2. 
-3. 
-
 # Credits
  Resources from class repo, Stack Overflow, and W3Schools were utilized to support creation of this application. Insomina was utilized to test routes.
 

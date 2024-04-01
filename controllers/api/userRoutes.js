@@ -1,5 +1,56 @@
 const router = require('express').Router();
-const { User,Post, Comment } = require('../models');
+const { User, Post, Comment } = require('../models');
+
+router.get('/', (req, res) => {
+  try {
+    const userData = User.findAll({
+      attributes: {
+        exclude: ['password']
+      }
+    })
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/:id', (req, res) => {
+  try {
+    const userData = User.findOne({
+      attributes: {
+        exclude: ['password']
+      },
+      include: [{
+        model: Post,
+        attributes: ['id', 'title', 'content', 'created_at']
+      },
+      {
+        model: Comment,
+        attributes: ['id', 'comment_text', 'created_at'],
+        include: {
+          model: Post,
+          attributes: ['title']
+        }
+      }
+    ]
+    })
+
+  } catch (err) {
+    res.status(500).json(err)
+  }
+});
+
+router.post('/', (req, res) => {
+  try {
+    const userData = User.Create({
+      username: req.body.username,
+      password: req.body.password
+    })
+    
+  } catch (err) {
+    res.status(500).json(err)
+  }
+});
 
 router.post('/login', async (req, res) => {
   try {
