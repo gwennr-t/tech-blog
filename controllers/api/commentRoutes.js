@@ -4,7 +4,12 @@ const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
     try {
-// comment findAll
+        const commentData = Comment.findAll()
+
+        const comments = commentData.map((comment) => comment.get({ plain: true }));
+        res.render('', {
+            comments
+        });
     } catch (err) {
         res.status(500).json(err);
     }
@@ -12,7 +17,16 @@ router.get('/', (req, res) => {
 
 router.post('/', withAuth,(req, res) => {
     try {
-// comment create
+        const commentData = Comment.Create({
+            comment_text: req.body.comment_text,
+            post_id: req.body.post_id,
+            user_id: req.session.user_id,
+        })
+
+        const comments = commentData.map((comment) => comment.get({ plain: true }));
+        res.render('', {
+            comments
+        });
     } catch (err) {
         res.status(500).json(err);
     }

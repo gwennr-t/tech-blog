@@ -36,10 +36,15 @@ router.put('/:id', withAuth,(req, res) => {
 
 router.delete('/:id', withAuth,(req, res) => {
     try {
-// post destroy
-    } catch (err) {
+        const postData = Post.destroy({
+          where: {
+            id: req.params.id
+          }, 
+        });
+
+      } catch (err) {
         res.status(500).json(err);
-    }
+      } 
 });
 
 module.exports = router;
