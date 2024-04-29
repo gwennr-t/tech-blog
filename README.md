@@ -1,10 +1,9 @@
 # Tech Blog
 
 ## Description
-This application is a CMS-style blog site where developers can publish their blog posts and comment on other developers' posts as well.
+This application is a CMS-style blog site where developers can publish their blog posts and comment on other developers' posts as well. Users will be able to login and logout as well as contribute posts to the tech blog. A use case for this web application is for developers to read and write about technical concepts, recent advancements, and new technologies. Not only will a user be able to post but users will be able to interact with posts made by other users in the comments section. 
 
 ## Preview
-[Demo Video]()
 
 ## Installation
 Access the tech blog web application through the browser using this [URL]() for the deployed application.
